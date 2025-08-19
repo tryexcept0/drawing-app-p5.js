@@ -1,0 +1,107 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 230px  minmax(500px, 1fr);
+	grid-template-rows: 35px minmax(500px, 1fr) 160px;
+	grid-template-areas:
+			"header header header header"
+			"sidebar content content layerP"
+			"colourP colourP options options";
+	background-color: #fff;
+	color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+
+#layersPanel {
+	grid-area: layerP;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	padding: 10px;
+	width: 180px;
+	overflow-y: auto;
+	font-family: sans-serif;
+}
+.layerItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: 6px;
+	cursor: pointer;
+}
+.layerThumb {
+	width: 40px;
+	height: 30px;
+	border: 1px solid #aaa;
+	margin-right: 6px;
+}
+.layerVisible {
+	margin-left: auto;
+	cursor: pointer;
+}
+.activeLayer {
+	background: #d0ebff;
+}
